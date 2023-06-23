@@ -19,9 +19,9 @@ class Vertice{
         return this.#y
     }
 
-    distancia(Vertice){
-        outroX = Vertice.x;
-        outroY = Vertice.y;
+    distancia(otherVertice){
+        outroX = otherVertice.x;
+        outroY = otherVertice.y;
 
         distance = (((outroX - this.#x)**2) + ((outroY - this.#y)**2))**0.5;
     }
@@ -31,8 +31,8 @@ class Vertice{
         this.#y = y;
     }
 
-    equals(Vertice){
+    equals(otherVertice){
         // === para evitar type coercion
-        return this.#x === Vertice.x && this.#y === Vertice.y;
+        return this.#x === otherVertice.x && this.#y === otherVertice.y;
     }
 }
