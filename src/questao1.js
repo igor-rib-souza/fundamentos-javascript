@@ -36,3 +36,5 @@ class Vertice{
         return this.#x === otherVertice.x && this.#y === otherVertice.y;
     }
 }
+
+export default Vertice;
