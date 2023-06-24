@@ -111,5 +111,65 @@ const vertice3 = new Vertice(x3,y3);
 
 const triangulo1 = new Triangulo(vertice1,vertice2,vertice3);
 
+// -------------------------
+
+const x4 = prompt("Digite o x do quarto vértice ");
+const y4 = prompt("Digite o y do quarto vértice");
+const vertice4 = new Vertice(x4,y4)
+
+const x5 = prompt("Digite o x do quinto vértice ");
+const y5 = prompt("Digite o y do quinto vértice ");
+const vertice5 = new Vertice(x5,y5);
+
+const x6 = prompt("Digite o x do sexto vértice ");
+const y6 = prompt("Digite o y do sexto vértice ");
+const vertice6 = new Vertice(x6,y6);
+
+const triangulo2 = new Triangulo(vertice4,vertice5,vertice6);
+
+// ---------------
+
+const x7 = prompt("Digite o x do sétimo vértice ");
+const y7 = prompt("Digite o y do sétimo vértice");
+const vertice7 = new Vertice(x7,y7)
+
+const x8 = prompt("Digite o x do oitavo vértice ");
+const y8 = prompt("Digite o y do oitavo vértice ");
+const vertice8 = new Vertice(x8,y8);
+
+const x9 = prompt("Digite o x do nono vértice ");
+const y9 = prompt("Digite o y do nono vértice ");
+const vertice9 = new Vertice(x9,y9);
+
+const triangulo3 = new Triangulo(vertice7,vertice8,vertice9);
+
 
 // getter vertices
+console.log(triangulo1.verticeA.x,triangulo1.verticeA.y);
+console.log(triangulo2.verticeA.x,triangulo2.verticeA.y);
+console.log(triangulo3.verticeA.x,triangulo3.verticeA.y);
+
+// equals
+console.log(triangulo1.equals(triangulo2));
+console.log(triangulo1.equals(triangulo3));
+console.log(triangulo2.equals(triangulo3));
+
+// perimetro
+console.log(triangulo1.perimetro());
+console.log(triangulo2.perimetro());
+console.log(triangulo3.perimetro());
+
+// tipo
+console.log(triangulo1.tipo());
+console.log(triangulo2.tipo());
+console.log(triangulo3.tipo());
+
+// clone
+const triangulo4 = triangulo1.clone();
+console.log(triangulo1.equals(triangulo4));
+
+// area
+console.log(triangulo1.area());
+console.log(triangulo2.area());
+console.log(triangulo3.area());
+console.log(triangulo4.area());
