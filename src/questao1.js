@@ -55,30 +55,31 @@ const vertice2 = new Vertice(x2, y2);
 const x3 = prompt("Digite o x do terceiro vértice ");
 const y3 = prompt("Digite o y do terceio vértice ");
 const vertice3 = new Vertice(x3, y3);
-    // getter x
+
+// getter x
 console.log(vertice1.x);
 console.log(vertice2.x);
 console.log(vertice3.x);
 
-    // getter y
+// getter y
 console.log(vertice1.y);
 console.log(vertice2.y);
 console.log(vertice3.y);
 
-    // distancia
+// distancia
 console.log(vertice1.distancia(vertice2));
 console.log(vertice1.distancia(vertice3));
 console.log(vertice2.distancia(vertice3));
 
-    // move
+// move
 console.log(vertice1.x);
 console.log(vertice1.y);
 console.log("Os valores acima são antes do move, os abaixo são após");
 vertice1.move(vertice2.x, vertice2.y);
 console.log(vertice1.x);
-    console.log(vertice1.y);
+console.log(vertice1.y);
 
-    // equals
+// equals
 console.log(vertice1.equals(vertice2));
 console.log(vertice1.equals(vertice3));
 console.log(vertice2.equals(vertice3))
