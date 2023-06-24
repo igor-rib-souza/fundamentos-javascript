@@ -1,0 +1,16 @@
+{
+  "name": "fundamentos-javascript",
+  "version": "1.0.0",
+  "description": "Resolução do Desafio 1.1 da IUULL, referente aos fundamentos de JavaScript.",
+  "main": "index.js",
+  "type": "module", 
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fundamentos-javascript"
+  },
+  "author": "igor-rib-souza",
+  "license": "ISC"
+}
