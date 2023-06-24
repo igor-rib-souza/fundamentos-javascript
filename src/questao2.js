@@ -88,7 +88,7 @@ class Triangulo {
 
         const s = this.perimetro() / 2;
 
-        return Math.sqrt(s * (semiperimetro - ladoA) * (s - ladoB) * (s - ladoC));
+        return Math.sqrt(s * (s - ladoA) * (s - ladoB) * (s - ladoC));
     }
 }
 
