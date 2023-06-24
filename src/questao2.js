@@ -1,4 +1,5 @@
-import Vertice from "./questao1";
+import  Vertice  from './questao1.js';
+import PromptSync from 'prompt-sync';
 
 class Triangulo {
 
@@ -90,3 +91,25 @@ class Triangulo {
         return Math.sqrt(s * (semiperimetro - ladoA) * (s - ladoB) * (s - ladoC));
     }
 }
+
+export default Triangulo;
+
+
+const prompt = PromptSync({ sigint: true }); 
+
+const x1 = prompt("Digite o x do primeiro vértice ");
+const y1 = prompt("Digite o y do primeiro vértice");
+const vertice1 = new Vertice(x1,y1)
+
+const x2 = prompt("Digite o x do segundo vértice ");
+const y2 = prompt("Digite o y do segundo vértice ");
+const vertice2 = new Vertice(x2,y2);
+
+const x3 = prompt("Digite o x do terceiro vértice ");
+const y3 = prompt("Digite o y do terceio vértice ");
+const vertice3 = new Vertice(x3,y3);
+
+const triangulo1 = new Triangulo(vertice1,vertice2,vertice3);
+
+
+// getter vertices
