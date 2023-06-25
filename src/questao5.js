@@ -70,9 +70,20 @@ function getDate(){
     return format(new Date(getDate()), "dd/MM/yyyy");
 }
 
+function getRenda(){
+    let aux = parseFloat(prompt("Digite sua renda ")).toFixed(2);
+    if (validarRenda(aux)){
+        return aux;
+    }
+    console.log("Sua renda deve ser maior ou igual 0");
+    return parseFloat(getRenda()).toFixed(2);
+}
+
 //const nome = getNome();
 //console.log(nome);
 //const cpf = getCPF();
 //console.log(cpf);
 //const data = getDate();
 //console.log(data);
+const renda = getRenda();
+console.log(renda);
