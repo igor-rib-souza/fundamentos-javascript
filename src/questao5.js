@@ -79,11 +79,22 @@ function getRenda(){
     return parseFloat(getRenda()).toFixed(2);
 }
 
+function getEstadoCivil(){
+    let aux = prompt("Digite seu estado civil: C, S, V ou D ");
+    if (validarEstadoCivil(aux)){
+        return aux.toUpperCase();
+    }
+    console.log("Digite apenas uma letra, C, S, V ou D");
+    return getEstadoCivil().toUpperCase();
+}
+
 //const nome = getNome();
 //console.log(nome);
 //const cpf = getCPF();
 //console.log(cpf);
 //const data = getDate();
 //console.log(data);
-const renda = getRenda();
-console.log(renda);
+//const renda = getRenda();
+//console.log(renda);
+const estadoCivil = getEstadoCivil();
+console.log(estadoCivil)
