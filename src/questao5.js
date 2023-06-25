@@ -35,16 +35,17 @@ function validarDependentes(dependentes) {
 }
 
 function formatarCPF(cpf) {
-    const parte1 = cpf.substr(0, 3);
-    const parte2 = cpf.substr(3, 3);
-    const parte3 = cpf.substr(6, 3);
-    const parte4 = cpf.substr(9, 2);
+    const cpfString = cpf.toString();
+    const parte1 = cpfString.substring(0, 3);
+    const parte2 = cpfString.substring(3, 6);
+    const parte3 = cpfString.substring(6, 9);
+    const parte4 = cpfString.substring(9, 11);
     return `${parte1}.${parte2}.${parte3}-${parte4}`;
 }
 
 
 function getNome(){
-    let aux = prompt("Digite seu nome ")
+    const aux = prompt("Digite seu nome ")
     if (validaNome(aux)){
         return aux;
     }
@@ -53,7 +54,7 @@ function getNome(){
 }
 
 function getCPF(){
-    let aux = parseInt(prompt("Digite seu CPF "));
+    const aux = parseInt(prompt("Digite seu CPF "));
     if (validaCPF(aux)){
         return aux;
     }
@@ -62,7 +63,7 @@ function getCPF(){
 }
 
 function getDate(){
-    let aux =  prompt("Digite sua data de nascimento DD/MM/AAAA ");
+    const aux =  prompt("Digite sua data de nascimento DD/MM/AAAA ");
     if (validarDataNascimento(aux)){
         return format(new Date(aux), "dd/MM/yyyy");
     }
@@ -71,7 +72,7 @@ function getDate(){
 }
 
 function getRenda(){
-    let aux = parseFloat(prompt("Digite sua renda ")).toFixed(2);
+    const aux = parseFloat(prompt("Digite sua renda ")).toFixed(2);
     if (validarRenda(aux)){
         return aux;
     }
@@ -80,7 +81,7 @@ function getRenda(){
 }
 
 function getEstadoCivil(){
-    let aux = prompt("Digite seu estado civil: C, S, V ou D ");
+    const aux = prompt("Digite seu estado civil: C, S, V ou D ");
     if (validarEstadoCivil(aux)){
         return aux.toUpperCase();
     }
@@ -89,7 +90,7 @@ function getEstadoCivil(){
 }
 
 function getDependentes(){
-    let aux = parseInt(prompt("Digite o número de dependentes "));
+    const aux = parseInt(prompt("Digite o número de dependentes "));
     if (validarDependentes(aux)){
         return aux;
     }
@@ -97,15 +98,15 @@ function getDependentes(){
     return parseInt(getDependentes());
 }
 
-//const nome = getNome();
-//console.log(nome);
-//const cpf = getCPF();
-//console.log(cpf);
-//const data = getDate();
-//console.log(data);
-//const renda = getRenda();
-//console.log(renda);
-//const estadoCivil = getEstadoCivil();
-//console.log(estadoCivil)
+const nome = getNome();
+console.log(nome);
+const cpf = getCPF();
+console.log(formatarCPF(cpf));
+const data = getDate();
+console.log(data);
+const renda = getRenda();
+console.log(renda);
+const estadoCivil = getEstadoCivil();
+console.log(estadoCivil)
 const dependentes = getDependentes();
 console.log(dependentes);
