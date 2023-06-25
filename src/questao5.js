@@ -44,54 +44,54 @@ function formatarCPF(cpf) {
 }
 
 
-function getNome(){
+function getNome() {
     const aux = prompt("Digite seu nome ")
-    if (validaNome(aux)){
+    if (validaNome(aux)) {
         return aux;
     }
     console.log("Seu nome deve ter pelo menos 5 caracteres")
     return getNome();
 }
 
-function getCPF(){
+function getCPF() {
     const aux = parseInt(prompt("Digite seu CPF "));
-    if (validaCPF(aux)){
+    if (validaCPF(aux)) {
         return aux;
     }
     console.log("Seu CPF deve ter exatamente 11 números")
     return parseInt(getCPF());
 }
 
-function getDate(){
-    const aux =  prompt("Digite sua data de nascimento DD/MM/AAAA ");
-    if (validarDataNascimento(aux)){
+function getDate() {
+    const aux = prompt("Digite sua data de nascimento DD/MM/AAAA ");
+    if (validarDataNascimento(aux)) {
         return format(new Date(aux), "dd/MM/yyyy");
     }
     console.log("A data precisa ser escrita no formato DD/MM/AAAA e você precisa ser maior de 18 anos")
     return format(new Date(getDate()), "dd/MM/yyyy");
 }
 
-function getRenda(){
+function getRenda() {
     const aux = parseFloat(prompt("Digite sua renda ")).toFixed(2);
-    if (validarRenda(aux)){
+    if (validarRenda(aux)) {
         return aux;
     }
     console.log("Sua renda deve ser maior ou igual 0");
     return parseFloat(getRenda()).toFixed(2);
 }
 
-function getEstadoCivil(){
+function getEstadoCivil() {
     const aux = prompt("Digite seu estado civil: C, S, V ou D ");
-    if (validarEstadoCivil(aux)){
+    if (validarEstadoCivil(aux)) {
         return aux.toUpperCase();
     }
     console.log("Digite apenas uma letra, C, S, V ou D");
     return getEstadoCivil().toUpperCase();
 }
 
-function getDependentes(){
+function getDependentes() {
     const aux = parseInt(prompt("Digite o número de dependentes "));
-    if (validarDependentes(aux)){
+    if (validarDependentes(aux)) {
         return aux;
     }
     console.log("Digite um número inteiro de 0 a 10");
