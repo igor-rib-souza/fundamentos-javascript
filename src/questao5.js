@@ -1,4 +1,5 @@
 import PromptSync from 'prompt-sync';
+import format from 'date-fns/format/index.js'
 
 const prompt = PromptSync({ sigint: true });
 
@@ -41,12 +42,6 @@ function formatarCPF(cpf) {
     return `${parte1}.${parte2}.${parte3}-${parte4}`;
 }
 
-function formatarData(data) {
-    const dia = data.getDate().toString().padStart(2, '0');
-    const mes = (data.getMonth() + 1).toString().padStart(2, '0');
-    const ano = data.getFullYear();
-    return `${dia}/${mes}/${ano}`;
-}
 
 function getNome(){
     let aux = prompt("Digite seu nome ")
@@ -66,7 +61,18 @@ function getCPF(){
     return parseInt(getCPF());
 }
 
+function getDate(){
+    let aux =  prompt("Digite sua data de nascimento DD/MM/AAAA ");
+    if (validarDataNascimento(aux)){
+        return format(new Date(aux), "dd/MM/yyyy");
+    }
+    console.log("A data precisa ser escrita no formato DD/MM/AAAA")
+    return format(new Date(getDate()), "dd/MM/yyyy");
+}
+
 //const nome = getNome();
 //console.log(nome);
 //const cpf = getCPF();
 //console.log(cpf);
+//const data = getDate();
+//console.log(data);
