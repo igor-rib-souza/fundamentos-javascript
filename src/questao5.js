@@ -88,6 +88,15 @@ function getEstadoCivil(){
     return getEstadoCivil().toUpperCase();
 }
 
+function getDependentes(){
+    let aux = parseInt(prompt("Digite o número de dependentes "));
+    if (validarDependentes(aux)){
+        return aux;
+    }
+    console.log("Digite um número inteiro de 0 a 10");
+    return parseInt(getDependentes());
+}
+
 //const nome = getNome();
 //console.log(nome);
 //const cpf = getCPF();
@@ -96,5 +105,7 @@ function getEstadoCivil(){
 //console.log(data);
 //const renda = getRenda();
 //console.log(renda);
-const estadoCivil = getEstadoCivil();
-console.log(estadoCivil)
+//const estadoCivil = getEstadoCivil();
+//console.log(estadoCivil)
+const dependentes = getDependentes();
+console.log(dependentes);
