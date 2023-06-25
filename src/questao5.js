@@ -67,7 +67,7 @@ function getDate(){
     if (validarDataNascimento(aux)){
         return format(new Date(aux), "dd/MM/yyyy");
     }
-    console.log("A data precisa ser escrita no formato DD/MM/AAAA")
+    console.log("A data precisa ser escrita no formato DD/MM/AAAA e você precisa ser maior de 18 anos")
     return format(new Date(getDate()), "dd/MM/yyyy");
 }
 
