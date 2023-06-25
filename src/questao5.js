@@ -99,14 +99,15 @@ function getDependentes(){
 }
 
 const nome = getNome();
-console.log(nome);
 const cpf = getCPF();
-console.log(formatarCPF(cpf));
 const data = getDate();
-console.log(data);
 const renda = getRenda();
-console.log(renda);
 const estadoCivil = getEstadoCivil();
-console.log(estadoCivil)
 const dependentes = getDependentes();
+
+console.log(nome);
+console.log(formatarCPF(cpf));
+console.log(data);
+console.log(renda);
+console.log(estadoCivil)
 console.log(dependentes);
