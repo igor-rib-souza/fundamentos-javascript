@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Resolução do Desafio 1.1 da IUULL, referente aos fundamentos de JavaScript.",
   "main": "index.js",
-  "type": "module", 
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +12,8 @@
     "url": "fundamentos-javascript"
   },
   "author": "igor-rib-souza",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.30.0"
+  }
 }
