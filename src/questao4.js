@@ -37,7 +37,7 @@ class Aluno {
         this.#P2 = nota;
     }
 
-    get notaFinal(){
+    notaFinal(){
         const nota1 = this.#P1? this.#P1 : parseFloat(0);
         const nota2 = this.#P2? this.#P2 : parseFloat(0);
 
@@ -100,7 +100,7 @@ class Turma {
     printAlunos(){
         console.log("—---------------------------------------\nMatricula Nome  P1 P2 NF\n—---------------------------------------")
         for (const a of this.#alunos){
-            console.log(`${a.matricula}  ${a.nome}  ${a.P1? a.P1 : '-'} ${a.P2? a.P2 : '-'} ${a.notaFinal}`);
+            console.log(`${a.matricula}  ${a.nome}  ${a.P1? a.P1 : '-'} ${a.P2? a.P2 : '-'} ${a.notaFinal()}`);
         }
     }
 
